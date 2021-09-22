@@ -3,11 +3,10 @@ const app = express();
 const hbs = require("hbs");
 const { request } = require("http");
 const path = require("path");
+const port = process.env.PORT || 3000;
 
 require("./db/conn");
 const Register = require("./models/registers");
-
-const port = process.env.PORT || 3000;
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
